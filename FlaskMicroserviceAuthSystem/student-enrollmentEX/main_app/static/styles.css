@@ -1,0 +1,54 @@
+/* main_app/static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#error-messages, #success-messages {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#error-messages {
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+
+#success-messages {
+    background-color: #ccffcc;
+    color: #006600;
+}

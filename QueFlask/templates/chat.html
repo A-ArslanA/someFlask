@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}QueChat{% endblock %}
+
+{% block body %}
+
+<a href="/logout"><p class="logout">LogOut</p></a>
+<div class="chat">
+    <div class="chat__inner">
+        <div class="chat__title">
+            <p>QueChat</p>
+        </div>
+        <div class="chat__messages">
+            {% if messages|length > 0 %}
+            {% for el in messages %}
+            <div class="chat__message">
+                <div class="chat__message__user">
+                    <img width="30px" src="{{ url_for('static', filename='img/green4.jpg') }}" alt="avatar">
+                    <span>{{ current_user.username }}</span>
+                </div>
+                <div class="chat__message__content">
+                    <p>{{ el.message }}</p>
+                </div>
+                <div class="chat__message__links">
+                    <a href="/editMessage/{{ el.id }}">Edit</a>
+                    <a href="/deleteMessage/{{ el.id }}">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="chat__message">
+                <div class="chat__message__user">
+                    <img width="30px" src="{{ url_for('static', filename='img/green4.jpg') }}" alt="avatar">
+                    <span>No Messages</span>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="chat__controls">
+            <form method="post" class="chat__controls__form">
+                <div class="chat__controls__input">
+                    <input type="text" name="inputMessage" id="inputMessage" placeholder="Type">
+                </div>
+                <div class="chat__controls__btn">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}LogIn{% endblock %}
+
+{% block body %}
+<div class="login-signUp">
+    <div class="container">
+        <div class="login-signUp__inner">
+            <div class="left-side">
+                <img src="{{ url_for('static', filename='img/green4.jpg') }}" alt="..." class="anim-img">
+            </div>
+            <div class="right-side">
+                <h3>Welcome</h3>
+                <p>Log In to system</p>
+                <form method="post" class="form">
+                    {{ form.csrf_token }}
+                    <input type="text" placeholder="Name" name="username" id="username" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <button type="submit">Log In</button>
+                </form>
+                <span>Don't have an account? <a href="/signUp">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

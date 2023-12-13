@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #131313;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* IMG ANIMATION  */
+.anim-img {
+    transition: 0.2s ease-in-out;
+}
+
+.anim-img:hover {
+    transform: scale(1.01);
+}
+
+.container {
+    padding: 0 150px;
+}
+
+
+/* CHAT  */
+
+.logout {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: all 0.4s ease 0s;
+    
+}
+
+.logout:hover {
+    transform: scale(1.05);
+
+}
+
+.chat {
+    max-width: 1280px;
+    min-height: 450px;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid palegreen;
+    padding: 10px 10px 80px 10px;
+    position: relative;
+}
+
+.chat__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.chat__messages {
+    max-height: 450px;
+    overflow: auto;
+    margin-left: 10px;
+}
+
+.chat__message {
+    margin-bottom: 40px;
+}
+
+.chat__message__user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat__message__user img {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.chat__message__content {
+    font-size: 14px;
+}
+
+.chat__controls {
+    position: absolute;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.chat__controls__form {
+    display: flex;
+}
+
+.chat__controls__input input {
+    width: 95%;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background-color: #0A0A0A;
+    color: white;
+    padding-left: 10px;
+}
+
+.chat__controls__input input::placeholder {
+    color: white;
+}
+
+.chat__controls__btn button {
+    border: 0;
+    outline: 0;
+    padding: 10px 10px;
+    background-color: palegreen;
+    color: black;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat__message__links a {
+    color: rgb(98, 171, 98);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* login-signUp  */
+
+.login-signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.login-signUp__inner {
+    display: flex;
+}
+
+.left-side {
+    width: 75%;
+}
+
+.left-side img {
+    width: 75%;
+    border-radius: 20px;
+}
+
+.right-side {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: -200px;
+}
+
+.right-side h3 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 5px;
+    line-height: 36px;
+    white-space: nowrap;
+}
+
+.right-side p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    width: 400px;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+}
+
+.form input::placeholder {
+    color: gray;
+}
+
+.form button {
+    border: 0;
+    outline: 0;
+    padding: 5px 180px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.form button:hover {
+    background-color: transparent;
+    border: 2px solid black;
+    color: white;
+}
+
+.right-side span {
+    color: gray;
+    font-size: 14px;
+}
+
+.right-side span a {
+    text-decoration: none;
+    color: rgba(232, 232, 232);
+}
+
+
+@media (max-width: 1450px) {
+    .left-side {
+        width: 65%;
+    }
+    
+    .left-side img {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .login-signUp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .login-signUp__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-side img {
+        min-width: 500px;
+        margin-bottom: 10px;
+    }
+
+    .left-side {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-side {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .login-signUp__inner {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-signUp__inner {
+        margin-left: 400px;
+    }
+}
+
+

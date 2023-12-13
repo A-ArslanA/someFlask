@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}SignUp{% endblock %}
+
+{% block body %}
+<div class="login-signUp">
+    <div class="container">
+        <div class="login-signUp__inner">
+            <div class="left-side">
+                <img src="{{ url_for('static', filename='img/green4.jpg') }}" alt="..." class="anim-img">
+            </div>
+            <div class="right-side">
+                <h3>Create an account</h3>
+                <p>Let's get started</p>
+                <form method="post" class="form">
+                    <input type="text" placeholder="Name" name="username" id="username" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <input type="password" placeholder="Repeat Password" name="repeatpassword" id="repeatpassword" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <span>Already have an account? <a href="/login">Log In</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
